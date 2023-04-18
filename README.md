@@ -22,7 +22,7 @@ Terraform ~> 1.0.0
 
 This module should be called by a terraform environment configuration
 ```  
-    source  =   "git@github.com:cabinetoffice/CO-Official-IT-AWS-Module-Route-Table.git"
+    source  =   "git@github.com:sce81/terraform-module-aws-route-table.git"
 ```
 
 ### Usage
