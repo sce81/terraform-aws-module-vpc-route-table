@@ -27,8 +27,8 @@ resource "aws_route" "main" {
 
 
 resource "aws_route_table_association" "main" {
-  count = length(local.subnet_ids)
+  count = length(var.subnet_ids)
 
-  subnet_id      = element(local.subnet_ids, count.index)
+  subnet_id      = element(var.subnet_ids, count.index)
   route_table_id = element(aws_route_table.main[*].id, count.index)
 }
