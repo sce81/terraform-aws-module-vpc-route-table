@@ -1,5 +1,7 @@
 variable "routes_count"                     {default = 1}
 variable "vpc_id"                           {}
+variable "env_name" {}
+variable "name" {}
 variable "subnet_ids"                       {type = list}
 variable "route_name"                       {type = list}
 variable "availability_zone"                {

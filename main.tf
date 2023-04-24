@@ -5,7 +5,7 @@ resource "aws_route_table" "main" {
     tags = merge(
         local.common_tags, var.extra_tags,
         tomap({
-            Name = "${element(var.route_name, count.index)}"
+            Name = "${var.name}-${var.env_name}-${element(var.route_name, count.index)}"
         })
     )
 }
