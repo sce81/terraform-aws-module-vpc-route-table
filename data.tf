@@ -1,11 +1,16 @@
+data "aws_vpc" "main" {
+  filter {
+    name   = "tag:Name"
+    values = ["${var.name}-${var.env_name}-vpc"]
+  }
+}
+
 locals {
+
+
   common_tags = tomap({
-    Terraform   = "true"
+    Terraform = "true"
   })
 
-}
 
-data "aws_vpc" "main" {
-  id = var.vpc_id
 }
-
