@@ -20,9 +20,14 @@ Terraform ~> 1.0.0
 Terraform ~> 1.0.0
 ### Installing
 
-This module should be called by a terraform environment configuration
+This module should be called by a terraform environment configuration via github
 ```  
-    source  =   "git@github.com:sce81/terraform-module-aws-route-table.git"
+      source           = "git@github.com:sce81/terraform-module-aws-route-table.git"
+```
+or Terraform Cloud
+```
+      source           = "app.terraform.io/HashiCorp_AWS_Org/terraform-module-aws-route-table/module"
+      version          = "1.0.0"
 ```
 
 ### Usage
@@ -35,7 +40,7 @@ vpc_id
 subnet_ids[]
 route_name[]
 ````
-This module also requires a minimum of 1 of.
+This module also requires a minimum of 1 of the interfaces listed below.
 each must have a corresponding route_cidr associated with it and route_cidrs may not overlap.  
 
 ```
