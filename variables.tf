@@ -1,12 +1,4 @@
 variable "routes_count" { default = 1 }
-variable "name" {
-  type        = string
-  description = "Name of Kubernetes cluster for tagging purposes"
-}
-variable "env_name" {
-  type        = string
-  description = "Name of environment for tagging purposes"
-}
 variable "vpc_id" {}
 variable "subnet_ids" { type = list(any) }
 variable "route_name" { type = list(any) }
