@@ -17,7 +17,7 @@ resource "aws_route" "main" {
   destination_cidr_block    = var.route_info[count.index].route_cidr
   egress_only_gateway_id    = var.route_info[count.index].egress_only_gateway_id
   gateway_id                = var.route_info[count.index].gateway_id
-  instance_id               = var.route_info[count.index].instance_id
+ //instance_id               = var.route_info[count.index].instance_id
   nat_gateway_id            = var.route_info[count.index].nat_gateway_id
   network_interface_id      = var.route_info[count.index].network_interface_id
   transit_gateway_id        = var.route_info[count.index].transit_gateway_id
