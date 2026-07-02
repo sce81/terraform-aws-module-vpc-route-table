@@ -13,19 +13,11 @@ resource "aws_route_table" "main" {
 resource "aws_route" "main" {
   count = length(var.route_info)
 
-<<<<<<< HEAD
-  route_table_id            = element(aws_route_table.main[*].id, count.index)
-  destination_cidr_block    = var.route_info[count.index].route_cidr
-  egress_only_gateway_id    = var.route_info[count.index].egress_only_gateway_id
-  gateway_id                = var.route_info[count.index].gateway_id
- //instance_id               = var.route_info[count.index].instance_id
-=======
   route_table_id         = element(aws_route_table.main[*].id, count.index)
   destination_cidr_block = var.route_info[count.index].route_cidr
   egress_only_gateway_id = var.route_info[count.index].egress_only_gateway_id
   gateway_id             = var.route_info[count.index].gateway_id
   //instance_id                            = var.route_info[count.index].instance_id
->>>>>>> 48bd22a (develop - removed instance_id for testing)
   nat_gateway_id            = var.route_info[count.index].nat_gateway_id
   network_interface_id      = var.route_info[count.index].network_interface_id
   transit_gateway_id        = var.route_info[count.index].transit_gateway_id
