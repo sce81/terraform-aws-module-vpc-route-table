@@ -72,9 +72,7 @@ The following values are outputted
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-| Name | Version |
-| ---- | ------- |
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.15.7 |
+No requirements.
 
 ## Providers
 
